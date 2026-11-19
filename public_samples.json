@@ -1,0 +1,484 @@
+{
+ "version": 2,
+ "scenes": [
+  {
+   "id": "mo-dau-quyet-dau",
+   "title": "Mở đầu: trận quyết đấu",
+   "blurb": "Hai sư huynh đệ giao đấu, đây là cảnh đầu tiên của game.",
+   "characters": [
+    {
+     "id": "hon",
+     "name": "Hồn",
+     "role": "nhân vật chính",
+     "samples": [
+      {
+       "vi": "audio/v2/hon_01.mp3",
+       "zh": "audio/v2/hon_01_goc.mp3",
+       "text": "Một chiêu nữa thôi… và mọi chuyện sẽ kết thúc.",
+       "text_zh": "下一招，一切就结束了。",
+       "dur": 2.59
+      },
+      {
+       "vi": "audio/v2/hon_02.mp3",
+       "zh": "audio/v2/hon_02_goc.mp3",
+       "text": "Ta nhất định sẽ đập tan dã tâm của ngươi!",
+       "text_zh": "我一定会将你的野心彻底粉碎！",
+       "dur": 2.27
+      }
+     ]
+    },
+    {
+     "id": "ta_thuong",
+     "name": "Tả Thương",
+     "role": "sư huynh của Hồn",
+     "samples": [
+      {
+       "vi": "audio/v2/ta_thuong_01.mp3",
+       "zh": "audio/v2/ta_thuong_01_goc.mp3",
+       "text": "Bao năm qua, chúng ta chưa từng phân định thắng bại. Nhưng hôm nay… nhất định phải có một người ngã xuống!",
+       "text_zh": "这么多年来，我二人从未分过胜负，但今日势必要有一个人倒下！",
+       "dur": 6.43
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "muoi-sau-nam-truoc",
+   "title": "Mười sáu năm trước",
+   "blurb": "Ký ức về những buổi luyện tập ở võ trường của Hội.",
+   "characters": [
+    {
+     "id": "ta_thuong",
+     "name": "Tả Thương",
+     "role": "sư huynh của Hồn",
+     "samples": [
+      {
+       "vi": "audio/v2/ta_thuong_02.mp3",
+       "zh": "audio/v2/ta_thuong_02_goc.mp3",
+       "text": "Ngươi đến muộn thế. Mau bắt đầu thôi!",
+       "text_zh": "你来晚了，赶紧开始罢！",
+       "dur": 2.25
+      },
+      {
+       "vi": "audio/v2/ta_thuong_03.mp3",
+       "zh": "audio/v2/ta_thuong_03_goc.mp3",
+       "text": "Gần đây trong Võ Lâm vừa xảy ra một vụ thảm án kinh hoàng. Chắc Sư Phụ vẫn đang bận điều tra.",
+       "text_zh": "武林中近日有桩惊世骇俗的惨案，义父恐怕正忙于调查。",
+       "dur": 4.65
+      }
+     ]
+    },
+    {
+     "id": "hon",
+     "name": "Hồn",
+     "role": "nhân vật chính",
+     "samples": [
+      {
+       "vi": "audio/v2/hon_03.mp3",
+       "zh": "audio/v2/hon_03_goc.mp3",
+       "text": "Hả? Sư Phụ vẫn chưa về sao?",
+       "text_zh": "哎？义父还没回来？",
+       "dur": 1.93
+      },
+      {
+       "vi": "audio/v2/hon_04.mp3",
+       "zh": "audio/v2/hon_04_goc.mp3",
+       "text": "Thật sao…? Bảo sao Sư Phụ vẫn chưa trở về…",
+       "text_zh": "啊？竟有这等事……义父看来是闲不下来了。",
+       "dur": 3.87
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "trai-tim",
+   "title": "Trái Tim",
+   "blurb": "Quỷ Thủ đưa ra hai cách để giữ Hồn sống.",
+   "characters": [
+    {
+     "id": "quy_thu",
+     "name": "Quỷ Thủ",
+     "role": "người cứu Hồn bằng một cái giá",
+     "samples": [
+      {
+       "vi": "audio/v2/quy_thu_01.mp3",
+       "zh": "audio/v2/quy_thu_01_goc.mp3",
+       "text": "Ngươi sẽ hành động bằng lý trí và toan tính tuyệt đối.",
+       "text_zh": "只在绝对的理性和算计之下行动；",
+       "dur": 3.37
+      },
+      {
+       "vi": "audio/v2/quy_thu_02.mp3",
+       "zh": "audio/v2/quy_thu_02_goc.mp3",
+       "text": "nhưng sau sáu mươi sáu ngày, nó sẽ lấy mạng ngươi.",
+       "text_zh": "到了六十六天之后，毒发身亡。",
+       "dur": 5.15
+      },
+      {
+       "vi": "audio/v2/quy_thu_03.mp3",
+       "zh": "audio/v2/quy_thu_03_goc.mp3",
+       "text": "Mang Trái Tim đó về đây, ta sẽ thay nó vào cho ngươi, bảo đảm ngươi sống qua sáu mươi sáu ngày!",
+       "text_zh": "你若夺来此心，吾便可给你换上，保你活过六十六天！",
+       "dur": 5.3
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "co-xe",
+   "title": "Trên chiếc xe ngựa",
+   "blurb": "Hồn đi về phía Bàng Trấn cùng lão lái xe.",
+   "characters": [
+    {
+     "id": "lao_can_dau",
+     "name": "Lão Căn Đầu",
+     "role": "lão lái xe",
+     "samples": [
+      {
+       "vi": "audio/v2/lao_can_dau_01.mp3",
+       "zh": "audio/v2/lao_can_dau_01_goc.mp3",
+       "text": "Trong trấn đang xảy ra chuyện rất đáng sợ! Lúc này còn đến đó làm gì chứ…?",
+       "text_zh": "那个镇上发生的事情，太吓人了！干嘛非得这个时候过去啊……",
+       "dur": 4.02
+      },
+      {
+       "vi": "audio/v2/lao_can_dau_02.mp3",
+       "zh": "audio/v2/lao_can_dau_02_goc.mp3",
+       "text": "Những ai mắc phải cứ như người mất hồn, ngày càng si dại…",
+       "text_zh": "得病的像是丢了魂儿，一天比一天痴呆，",
+       "dur": 3.24
+      },
+      {
+       "vi": "audio/v2/lao_can_dau_03.mp3",
+       "zh": "audio/v2/lao_can_dau_03_goc.mp3",
+       "text": "Nghe đồn rằng linh hồn của những người mắc bệnh đã ám vào chúng…",
+       "text_zh": "据说那上边儿，就附着昏睡过去那些人的魂儿呢……",
+       "dur": 4.02
+      }
+     ]
+    },
+    {
+     "id": "hon",
+     "name": "Hồn",
+     "role": "nhân vật chính",
+     "samples": [
+      {
+       "vi": "audio/v2/hon_05.mp3",
+       "zh": "audio/v2/hon_05_goc.mp3",
+       "text": "Bàng Trấn, đã xảy ra chuyện gì?",
+       "text_zh": "庞镇……究竟发生了什么？",
+       "dur": 2.25
+      }
+     ]
+    },
+    {
+     "id": "truy_menh",
+     "name": "Truy Mệnh",
+     "role": "sát thủ của Hội",
+     "samples": [
+      {
+       "vi": "audio/v2/truy_menh_01.mp3",
+       "zh": "audio/v2/truy_menh_01_goc.mp3",
+       "text": "Hồn Đại Nhân… đã giết Minh Chủ…",
+       "text_zh": "魂大人……杀害前冥主……",
+       "dur": 3.53
+      },
+      {
+       "vi": "audio/v2/truy_menh_02.mp3",
+       "zh": "audio/v2/truy_menh_02_goc.mp3",
+       "text": "Theo pháp lệnh của Hội…",
+       "text_zh": "依“组织”之法……",
+       "dur": 2.12
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "thung-lung",
+   "title": "Chương 1: thung lũng",
+   "blurb": "Hồn gặp Ngọc Nhi và những người sống sót trong thung lũng.",
+   "characters": [
+    {
+     "id": "ngoc_nhi",
+     "name": "Ngọc Nhi",
+     "role": "cô gái đi tìm hoa thuốc cho cha",
+     "samples": [
+      {
+       "vi": "audio/v2/ngoc_nhi_01.mp3",
+       "zh": "audio/v2/ngoc_nhi_01_goc.mp3",
+       "text": "Đúng. Ta tên là Ngọc Nhi. Cha ta là người nấu rượu trong trấn.",
+       "text_zh": "嗯，我叫玉儿，是镇子里酿酒师的女儿。",
+       "dur": 4.81
+      },
+      {
+       "vi": "audio/v2/ngoc_nhi_02.mp3",
+       "zh": "audio/v2/ngoc_nhi_02_goc.mp3",
+       "text": "Chỉ cần tìm được Huyết Nhục Hoa, cha ta nhất định sẽ khỏe lại!",
+       "text_zh": "若能找到这方子上说的血肉之花，爹爹一定会好起来的！",
+       "dur": 3.87
+      },
+      {
+       "vi": "audio/v2/ngoc_nhi_03.mp3",
+       "zh": "audio/v2/ngoc_nhi_03_goc.mp3",
+       "text": "Ngươi đến đây là để cứu chúng ta… đúng không?",
+       "text_zh": "你一定是来拯救我们镇子的吧……对不对……",
+       "dur": 4.49
+      }
+     ]
+    },
+    {
+     "id": "hon",
+     "name": "Hồn",
+     "role": "nhân vật chính",
+     "samples": [
+      {
+       "vi": "audio/v2/hon_06.mp3",
+       "zh": "audio/v2/hon_06_goc.mp3",
+       "text": "Chỉ cần đến được đó, ta sẽ lần ra tung tích của Tả Thương.",
+       "text_zh": "（只要到了那儿，我就能追查到左殇的下落了吧！）",
+       "dur": 3.53
+      },
+      {
+       "vi": "audio/v2/hon_07.mp3",
+       "zh": "audio/v2/hon_07_goc.mp3",
+       "text": "Sau này hãy nhớ, giữa chốn giang hồ này, đừng dễ rơi lệ, hãy mỉm cười nhiều hơn.",
+       "text_zh": "以后切记，在这江湖中，莫要流泪，要多笑笑。",
+       "dur": 5.77
+      }
+     ]
+    },
+    {
+     "id": "inanis",
+     "name": "Hư Không",
+     "samples": [
+      {
+       "vi": "audio/v2/inanis_01.mp3",
+       "zh": "audio/v2/inanis_01_goc.mp3",
+       "text": "Chiếc Chuông này sẽ chỉ ngân vang vì ngươi. Nó sẽ chữa lành mọi vết thương của ngươi.",
+       "text_zh": "这铃声只为你响起，会疗愈你的全部伤势。",
+       "dur": 5.46
+      },
+      {
+       "vi": "audio/v2/inanis_02.mp3",
+       "zh": "audio/v2/inanis_02_goc.mp3",
+       "text": "Dù là kẻ sống hay người chết, ai cũng để lại những mảnh ký ức trôi dạt trong Nội Võ Lâm…",
+       "text_zh": "无论是活人还是死人，总会有一丝飘散的记忆游荡于里武林之中……",
+       "dur": 6.09
+      }
+     ]
+    },
+    {
+     "id": "lao_cung_thu",
+     "name": "Lão Cung Thủ",
+     "role": "người từng dạy đệ tử bắn cung",
+     "samples": [
+      {
+       "vi": "audio/v2/lao_cung_thu_01.mp3",
+       "zh": "audio/v2/lao_cung_thu_01_goc.mp3",
+       "text": "Ta không nỡ nhìn, nên đưa chúng về rồi dạy chúng bắn cung.",
+       "text_zh": "老夫见不得，便捡回来教他们弓箭。",
+       "dur": 4.68
+      },
+      {
+       "vi": "audio/v2/lao_cung_thu_02.mp3",
+       "zh": "audio/v2/lao_cung_thu_02_goc.mp3",
+       "text": "Đệ tử chỉ mang nhục về cho ta… chính ta đã nuôi dạy nên một lũ súc sinh…",
+       "text_zh": "门下不幸，教养出一群畜生……",
+       "dur": 6.43
+      }
+     ]
+    },
+    {
+     "id": "doi_truong",
+     "name": "Đội Trưởng",
+     "role": "đội trưởng kiếm khách",
+     "samples": [
+      {
+       "vi": "audio/v2/doi_truong_01.mp3",
+       "zh": "audio/v2/doi_truong_01_goc.mp3",
+       "text": "Thuốc mỡ của Ngọc Nhi cô nương quả thật hiệu nghiệm phi thường.",
+       "text_zh": "……玉儿姑娘配的药膏，竟有如此奇效。",
+       "dur": 3.24
+      }
+     ]
+    },
+    {
+     "id": "truy_menh",
+     "name": "Truy Mệnh",
+     "role": "sát thủ của Hội",
+     "samples": [
+      {
+       "vi": "audio/v2/truy_menh_03.mp3",
+       "zh": "audio/v2/truy_menh_03_goc.mp3",
+       "text": "Hãy gặp ta ở thác nước. Chúng ta sẽ phân thắng bại tại đó!",
+       "text_zh": "在前面的大瀑布，做个了断！",
+       "dur": 5.49
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "thap-sat-khi",
+   "title": "Tháp Sát Khí Cải Tạo",
+   "blurb": "Một Quỷ Sai của Hội không còn nghe lệnh.",
+   "characters": [
+    {
+     "id": "quy_sai",
+     "name": "Quỷ Sai",
+     "samples": [
+      {
+       "vi": "audio/v2/quy_sai_01.mp3",
+       "zh": "audio/v2/quy_sai_01_goc.mp3",
+       "text": "Tháp Sát Khí Cải Tạo này được Thập Nhất Nhân Các xây dựng từ rất lâu trước đây.",
+       "text_zh": "这种杀气改造塔是昔年“十一人阁”建造的。",
+       "dur": 5.3
+      },
+      {
+       "vi": "audio/v2/quy_sai_02.mp3",
+       "zh": "audio/v2/quy_sai_02_goc.mp3",
+       "text": "Ngươi nên cẩn thận thì hơn. Đồng liêu của ta đều đã nhận lệnh mang thủ cấp của ngươi về!",
+       "text_zh": "你可要小心了，我的同僚接到命令，要取你的性命！",
+       "dur": 5.77
+      },
+      {
+       "vi": "audio/v2/quy_sai_03.mp3",
+       "zh": "audio/v2/quy_sai_03_goc.mp3",
+       "text": "Mệnh Lệnh Khắc Tâm là thứ mà Hội dùng để khống chế chúng ta. Những phương pháp thông thường vốn không thể giải trừ nó.",
+       "text_zh": "楔子命令是“组织”用来控制我等的法门，寻常方法自是不可解除。",
+       "dur": 7.05
+      }
+     ]
+    },
+    {
+     "id": "hon",
+     "name": "Hồn",
+     "role": "nhân vật chính",
+     "samples": [
+      {
+       "vi": "audio/v2/hon_08.mp3",
+       "zh": "audio/v2/hon_08_goc.mp3",
+       "text": "Vậy là… trong di tích này cũng có loại Hỗn Nguyên Thạch đó sao?",
+       "text_zh": "所以，此座杀气塔废墟的某处，也有这种浑源石吗？",
+       "dur": 4.81
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "duong-len-nui",
+   "title": "Đường lên núi",
+   "blurb": "Những người Hồn gặp trên đường lên đỉnh núi.",
+   "characters": [
+    {
+     "id": "luc_tam_thien",
+     "name": "Lục Tam Thiên",
+     "role": "trưởng thôn Lục Gia",
+     "samples": [
+      {
+       "vi": "audio/v2/luc_tam_thien_01.mp3",
+       "zh": "audio/v2/luc_tam_thien_01_goc.mp3",
+       "text": "Đa tạ các hạ. Lão tên là Lục Tam Thiên, trưởng thôn Lục Gia dưới chân núi…",
+       "text_zh": "多谢阁下，老朽名叫陆三迁，是山下陆家村的村长……",
+       "dur": 8.02
+      },
+      {
+       "vi": "audio/v2/luc_tam_thien_02.mp3",
+       "zh": "audio/v2/luc_tam_thien_02_goc.mp3",
+       "text": "Cái này… đúng là dây buộc tóc đỏ của Tiểu Thúy rồi. Nó quý như vàng, đi đâu cũng mang theo…",
+       "text_zh": "这……这是小翠的红头绳……她一直很爱惜，从不离身……",
+       "dur": 8.18
+      }
+     ]
+    },
+    {
+     "id": "hon",
+     "name": "Hồn",
+     "role": "nhân vật chính",
+     "samples": [
+      {
+       "vi": "audio/v2/hon_09.mp3",
+       "zh": "audio/v2/hon_09_goc.mp3",
+       "text": "Thôn của ông đã không còn tồn tại nữa rồi.",
+       "text_zh": "那村子早已不存在了。",
+       "dur": 1.93
+      },
+      {
+       "vi": "audio/v2/hon_10.mp3",
+       "zh": "audio/v2/hon_10_goc.mp3",
+       "text": "Người chết không thể trở về. Chấp nhận sự thật ấy sẽ bớt những khổ đau vô ích.",
+       "text_zh": "人死不能复生，若能明白，何苦如此。",
+       "dur": 5.15
+      },
+      {
+       "vi": "audio/v2/hon_11.mp3",
+       "zh": "audio/v2/hon_11_goc.mp3",
+       "text": "Hoang Hành Tử… Tình huynh đệ còn ý nghĩa gì với hắn không?",
+       "text_zh": "荒行子……他还念着师兄弟之情吗？",
+       "dur": 4.02
+      }
+     ]
+    },
+    {
+     "id": "song_sot",
+     "name": "Người sống sót trên núi",
+     "samples": [
+      {
+       "vi": "audio/v2/song_sot_01.mp3",
+       "zh": "audio/v2/song_sot_01_goc.mp3",
+       "text": "Hay! Lại đây, uống với ta một chén nào!",
+       "text_zh": "好！阁下何不过来共饮一杯？",
+       "dur": 3.71
+      }
+     ]
+    },
+    {
+     "id": "lieu_nghia",
+     "name": "Liễu Nghĩa",
+     "role": "thuộc hạ của Mặc Ki Tử",
+     "samples": [
+      {
+       "vi": "audio/v2/lieu_nghia_01.mp3",
+       "zh": "audio/v2/lieu_nghia_01_goc.mp3",
+       "text": "Hừ… Liễu Nghĩa ta lại có ngày rơi vào bước đường này sao…",
+       "text_zh": "哼……我柳义竟会沦落到如此境地……",
+       "dur": 4.34
+      },
+      {
+       "vi": "audio/v2/lieu_nghia_02.mp3",
+       "zh": "audio/v2/lieu_nghia_02_goc.mp3",
+       "text": "Nhớ lại năm xưa, Chính Đạo chúng ta từng hưng thịnh như mặt trời giữa trưa!",
+       "text_zh": "曾几何时，我正道如日中天！",
+       "dur": 5.77
+      },
+      {
+       "vi": "audio/v2/lieu_nghia_03.mp3",
+       "zh": "audio/v2/lieu_nghia_03_goc.mp3",
+       "text": "Không ngờ vẫn có người lên được đến tận đây…",
+       "text_zh": "没想到，还有人可以到此……",
+       "dur": 4.02
+      }
+     ]
+    },
+    {
+     "id": "mac_ki_tu",
+     "name": "Mặc Ki Tử",
+     "samples": [
+      {
+       "vi": "audio/v2/mac_ki_tu_01.mp3",
+       "zh": "audio/v2/mac_ki_tu_01_goc.mp3",
+       "text": "Được kề vai chiến đấu cùng ngươi… là vinh hạnh của ta.",
+       "text_zh": "跟你并肩作战过……实属荣幸……",
+       "dur": 4.99
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

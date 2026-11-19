@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Phantom Blade Zero: Lồng tiếng Việt</title>
+<meta name="description" content="Phần mở đầu và chương 1 của bản lồng tiếng Việt Phantom Blade Zero do người hâm mộ tự làm. Nghe thử, so với bản gốc tiếng Trung và cho mình biết dự án có nên tiếp tục không.">
+<meta name="color-scheme" content="dark light">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0f1012;--bg2:#15171a;--panel:#1a1c20;--panel2:#212328;--line:#2b2e34;
+  --ink:#ece8df;--mute:#a3a097;--accent:#e0654d;--accent2:#f39a82;--on-accent:#1a120f;--shadow:0 8px 30px rgba(0,0,0,.35);
+  --font:"Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;
+}
+@media (prefers-color-scheme:light){
+  :root:not([data-theme="dark"]){
+    --bg:#f6f3ec;--bg2:#efebe1;--panel:#ffffff;--panel2:#f1ede4;--line:#ddd7c8;
+    --ink:#1e1b17;--mute:#625d52;--accent:#c2432c;--accent2:#a3331f;--on-accent:#ffffff;--shadow:0 8px 24px rgba(60,40,20,.10);
+  }
+}
+:root[data-theme="light"]{
+  --bg:#f6f3ec;--bg2:#efebe1;--panel:#ffffff;--panel2:#f1ede4;--line:#ddd7c8;
+  --ink:#1e1b17;--mute:#625d52;--accent:#c2432c;--accent2:#a3331f;--on-accent:#ffffff;--shadow:0 8px 24px rgba(60,40,20,.10);
+}
+:root[data-theme="dark"]{color-scheme:dark}
+:root[data-theme="light"]{color-scheme:light}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:72px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16.5px/1.7 var(--font)}
+.wrap{max-width:46rem;margin:0 auto;padding:0 16px}
+a{color:var(--accent2)}
+p{margin:0 0 1rem}
+h1,h2,h3{font-family:var(--font);margin:0}
+
+/* top bar */
+.top{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:14px;height:56px}
+.brand{font-weight:700;font-size:.95rem;letter-spacing:.01em;color:var(--ink);text-decoration:none;white-space:nowrap}
+.brand i{font-style:normal;color:var(--accent)}
+.top nav{margin-left:auto;display:flex;gap:4px;align-items:center}
+.top nav a{color:var(--mute);text-decoration:none;font-size:.9rem;padding:.4rem .65rem;border-radius:8px}
+.top nav a:hover{color:var(--ink);background:var(--panel2)}
+.themebtn{border:1px solid var(--line);background:var(--panel);color:var(--ink);width:36px;height:36px;border-radius:10px;cursor:pointer;font-size:1rem;line-height:1}
+.themebtn:hover{background:var(--panel2)}
+@media (max-width:520px){.top nav a.opt{display:none}}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:4rem 0 2.6rem;border-bottom:1px solid var(--line);background:radial-gradient(120% 90% at 85% -10%,color-mix(in srgb,var(--accent) 22%,transparent),transparent 60%),var(--bg)}
+.eyebrow{display:inline-block;font-size:.8rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent2);margin:0 0 1rem}
+.hero h1{font-weight:700;font-size:clamp(2.1rem,8vw,3.4rem);line-height:1.1;letter-spacing:-.01em;margin:0 0 .5rem}
+.hero h1 span{display:block;color:var(--accent2)}
+.hero .one{font-size:1.15rem;max-width:34rem;margin:1rem 0 1.4rem;color:var(--ink)}
+.cta{display:flex;flex-wrap:wrap;gap:.7rem;margin:0 0 1.6rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;background:var(--accent);color:var(--on-accent);font:inherit;font-weight:600;text-decoration:none;padding:.75rem 1.3rem;border-radius:10px;border:1px solid var(--accent);cursor:pointer;min-height:44px}
+.btn:hover{filter:brightness(1.08)}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn.ghost:hover{background:var(--panel2);filter:none}
+.btn[disabled]{opacity:.5;cursor:default}
+.note{display:flex;gap:.8rem;align-items:flex-start;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:.9rem 1rem;color:var(--mute);font-size:.94rem;line-height:1.6;max-width:36rem}
+.note b{font-weight:600;color:var(--ink)}
+.bars{position:absolute;right:16px;top:70px;display:flex;gap:5px;align-items:flex-end;height:90px;opacity:.5;pointer-events:none}
+.bars span{width:5px;border-radius:3px;background:var(--accent);animation:eq 1.8s ease-in-out infinite}
+.bars span:nth-child(1){height:30%}.bars span:nth-child(2){height:75%;animation-delay:.2s}.bars span:nth-child(3){height:50%;animation-delay:.4s}.bars span:nth-child(4){height:95%;animation-delay:.1s}.bars span:nth-child(5){height:40%;animation-delay:.5s}.bars span:nth-child(6){height:65%;animation-delay:.3s}
+@keyframes eq{0%,100%{transform:scaleY(.55)}50%{transform:scaleY(1)}}
+@media (max-width:560px){.bars{display:none}}
+
+/* sections */
+section{padding:3rem 0 0}
+h2{font-weight:700;font-size:1.5rem;line-height:1.3;margin:0 0 .6rem;letter-spacing:-.005em}
+.intro{color:var(--mute);max-width:38rem}
+.chips{display:flex;gap:.5rem;flex-wrap:wrap;margin:1rem 0 .2rem}
+.chip{border:1px solid var(--line);background:var(--panel);color:var(--ink);padding:.45rem .9rem;border-radius:999px;font:inherit;font-size:.9rem;cursor:pointer;text-decoration:none}
+.chip:hover{background:var(--panel2)}
+.scene{margin-top:2.2rem}
+.scene>h3.st{font-size:1.15rem;font-weight:650;padding-bottom:.5rem;border-bottom:1px solid var(--line)}
+.scene>p.sb{color:var(--mute);margin:.6rem 0 0;font-size:.95rem}
+
+/* character card */
+.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:1.1rem 1.1rem .5rem;margin:1.1rem 0;box-shadow:var(--shadow)}
+.card h3{font-size:1.1rem;font-weight:650}
+.role{margin:.1rem 0 .5rem;font-size:.9rem;color:var(--mute)}
+.takes{list-style:none;margin:.6rem 0 0;padding:0}
+.take{padding:.9rem 0;border-top:1px solid var(--line)}
+.row1{display:flex;align-items:center;gap:.7rem}
+.pp{flex:0 0 auto;width:46px;height:46px;border-radius:50%;border:0;background:var(--accent);color:var(--on-accent);cursor:pointer;display:grid;place-items:center;padding:0}
+.pp:hover{filter:brightness(1.1)}
+.pp svg{width:20px;height:20px;fill:currentColor}
+.pp .ic-pause{display:none}
+.take.playing .pp .ic-play{display:none}
+.take.playing .pp .ic-pause{display:block}
+.prog{flex:1;min-width:0;display:flex;align-items:center;gap:.6rem}
+.prog input[type=range]{flex:1;min-width:0;height:24px;margin:0;background:transparent;accent-color:var(--accent);cursor:pointer}
+.tm{font-size:.8rem;color:var(--mute);font-variant-numeric:tabular-nums;min-width:2.6rem;text-align:right}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:10px;overflow:hidden;flex:0 0 auto}
+.seg button{border:0;background:transparent;color:var(--mute);font:inherit;font-size:.78rem;font-weight:600;padding:.4rem .6rem;cursor:pointer;min-height:36px}
+.seg button[aria-pressed=true]{background:var(--accent);color:var(--on-accent)}
+.vonly{font-size:.78rem;color:var(--mute);border:1px dashed var(--line);border-radius:10px;padding:.35rem .55rem;flex:0 0 auto}
+.line{margin:.6rem 0 0;font-size:.97rem;line-height:1.6}
+.line small{display:block;color:var(--mute);font-size:.85rem;margin-top:.2rem}
+@media (max-width:520px){
+  .row1{flex-wrap:wrap}
+  .prog{order:3;flex:1 0 100%}
+  .seg{margin-left:auto}
+}
+.empty{border:1px dashed var(--line);border-radius:12px;padding:1.2rem;color:var(--mute);margin:1.2rem 0}
+
+/* rating */
+.rate{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;padding:.9rem 0 1rem;border-top:1px solid var(--line)}
+.rate .q{flex:0 0 100%;font-size:.92rem;color:var(--mute)}
+.rate label{position:relative;cursor:pointer}
+.rate input{position:absolute;opacity:0;inset:0;width:100%;height:100%;margin:0;cursor:pointer}
+.rate label span{display:inline-flex;width:2.6rem;height:2.6rem;align-items:center;justify-content:center;border:1px solid var(--line);border-radius:10px;font-weight:650;color:var(--mute);background:var(--bg2)}
+.rate input:checked+span{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.rate input:focus-visible+span{outline:2px solid var(--accent2);outline-offset:2px}
+.rnote{display:block;width:100%;min-height:3.6rem;margin:0 0 .9rem;background:var(--bg2);color:var(--ink);border:1px solid var(--line);border-radius:10px;padding:.6rem .7rem;font:inherit;font-size:.95rem;line-height:1.5;resize:vertical}
+.rnote::placeholder{color:var(--mute)}
+.rnote:focus-visible,.vote textarea:focus-visible{outline:2px solid var(--accent2);outline-offset:1px}
+.vote fieldset{border:0;margin:0 0 1.2rem;padding:0}
+.vote legend{padding:0;margin-bottom:.5rem;font-weight:650}
+.vote .opt{display:inline-flex;align-items:center;gap:.45rem;margin:0 1.2rem .5rem 0;cursor:pointer}
+.vote .opt input{width:1.1rem;height:1.1rem;accent-color:var(--accent)}
+.vote .lbl{display:block;font-size:.9rem;color:var(--mute);margin:0 0 .3rem}
+.vote textarea{display:block;width:100%;min-height:6.5rem;background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:10px;padding:.7rem;font:inherit;line-height:1.5}
+.vote .msg{margin:.8rem 0 0;color:var(--accent2);min-height:1.6em}
+
+/* status, how, donate */
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(10.5rem,1fr));gap:.8rem;margin:1rem 0 0;padding:0;list-style:none}
+.facts li{border:1px solid var(--line);border-radius:14px;padding:1rem;background:var(--panel);line-height:1.45;font-size:.93rem;color:var(--mute)}
+.facts b{display:block;font-size:1.45rem;font-weight:700;color:var(--accent2);margin-bottom:.15rem;line-height:1.25}
+.limits p{color:var(--mute)}
+.limits p:first-of-type{margin-top:.8rem}
+.donate{border:1px solid var(--line);background:var(--panel);border-radius:16px;padding:1.2rem;margin:1.2rem 0;color:var(--mute);text-align:center}
+.donate img{display:block;width:100%;max-width:19rem;height:auto;margin:0 auto;border-radius:12px}
+.donate p{margin:.9rem 0 0;font-size:.95rem}
+.donate .bank{margin-top:1.1rem;padding-top:1rem;border-top:1px solid var(--line);line-height:1.8}
+.donate strong{color:var(--ink);font-size:1.15rem;letter-spacing:.04em;user-select:all}
+a:focus-visible,button:focus-visible,.chip:focus-visible{outline:2px solid var(--accent2);outline-offset:3px}
+footer{margin:4rem 0 0;padding:1.5rem 0 3rem;border-top:1px solid var(--line);color:var(--mute);font-size:.88rem;line-height:1.65}
+</style>
+</head>
+<body>
+
+<div class="top">
+  <div class="wrap">
+    <a class="brand" href="#top"><i>PBZ</i> Lồng tiếng Việt</a>
+    <nav aria-label="Điều hướng">
+      <a href="#nghe-thu">Nghe thử</a>
+      <a class="opt" href="#hien-trang">Dự án</a>
+      <a class="opt" href="#ung-ho">Ủng hộ</a>
+      <button type="button" class="themebtn" id="theme" aria-label="Đổi giao diện sáng hoặc tối" title="Đổi giao diện sáng hoặc tối">◐</button>
+    </nav>
+  </div>
+</div>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="bars" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+    <span class="eyebrow">Dự án của người hâm mộ</span>
+    <h1>Phantom Blade Zero<span>Lồng tiếng Việt</span></h1>
+    <p class="one">Một người đang cố lồng tiếng Việt cho cả game mà vẫn giữ chất giọng riêng của từng nhân vật.</p>
+    <div class="cta">
+      <a class="btn" href="#nghe-thu">Nghe thử</a>
+      <a class="btn ghost" href="#ung-ho">Ủng hộ dự án</a>
+    </div>
+    <p class="note"><span><b>Nói rõ để bạn khỏi hiểu lầm.</b> Giọng tiếng Việt trên trang này được làm bằng AI, không phải bản thu của diễn viên. Đây là sản phẩm của người hâm mộ, không chính thức và không liên quan đến nhà phát triển hay nhà phát hành.</span></p>
+  </div>
+</header>
+
+<main class="wrap">
+
+<section id="nghe-thu">
+  <h2>Nghe thử</h2>
+  <p class="intro">Chương 1 đã xong trong phiên bản mới này, gồm phần mở đầu và chương 1, và mọi câu thoại ở hai phần đó đều đã có tiếng Việt. Dưới đây là một số câu mình chọn theo thứ tự trong game. Bấm nút phát để nghe từng câu. Với câu có bản gốc, bạn chuyển qua lại giữa tiếng Trung gốc và tiếng Việt bằng nút chuyển bên phải. Nghe xong, bạn có thể chấm điểm từng giọng ngay dưới lần xuất hiện đầu tiên của nhân vật đó.</p>
+  <div class="chips" id="chips" hidden></div>
+  <div id="scenes"><p class="empty" id="loading">Đang tải các mẫu giọng...</p></div>
+  <noscript><p class="empty">Trang cần JavaScript để hiện các mẫu giọng.</p></noscript>
+</section>
+
+<section id="hien-trang">
+  <h2>Dự án đang ở đâu</h2>
+  <ul class="facts">
+    <li><b>5.076</b>dòng thoại trong game</li>
+    <li><b>4.117</b>câu có tiếng, hơn 5 giờ thoại</li>
+    <li><b>Chương 1</b>đã xong, cùng với phần mở đầu</li>
+    <li><b>Mọi câu</b>ở hai phần này đều đã có tiếng Việt</li>
+  </ul>
+</section>
+
+<section id="chua-tot" class="limits">
+  <h2>Những gì còn chưa tốt</h2>
+  <p>Câu la hét, cười và những chỗ cảm xúc mạnh nghe còn thiếu lực.</p>
+  <p>Nhân vật phụ như lính hay đệ tử có thể chưa đúng chất giọng gốc. Đây là sản phẩm của một người làm bằng tay, không hoàn hảo. Bạn nghe thấy chỗ nào chưa ổn thì cho mình biết, mình rất cần góp ý của bạn.</p>
+</section>
+
+<section id="danh-gia" class="vote" hidden>
+  <h2>Đánh giá của bạn</h2>
+  <p class="intro">Bạn chấm điểm từng giọng ngay dưới lần xuất hiện đầu tiên của mỗi nhân vật ở trên, từ 1 là chưa được đến 5 là rất ổn. Nếu có nhận xét riêng cho giọng nào, bạn ghi vào ô ngay dưới giọng đó, mình sẽ dựa vào đấy để sửa. Sau cùng, bạn trả lời giúp mình hai câu dưới đây. Đánh giá được gửi ẩn danh, không cần đăng nhập.</p>
+  <fieldset>
+    <legend>Dự án có nên tiếp tục không?</legend>
+    <label class="opt"><input type="radio" name="cont" value="Nên"> Nên</label>
+    <label class="opt"><input type="radio" name="cont" value="Chưa chắc"> Chưa chắc</label>
+    <label class="opt"><input type="radio" name="cont" value="Không nên"> Không nên</label>
+  </fieldset>
+  <label class="lbl" for="gy">Góp ý thêm, nếu có</label>
+  <textarea id="gy" maxlength="1500"></textarea>
+  <button type="button" class="btn" id="gui" style="margin-top:1rem">Gửi đánh giá</button>
+  <p class="msg" id="tb" role="status"></p>
+  <iframe name="gf" id="gf" hidden title="Gửi đánh giá"></iframe>
+</section>
+
+<section id="ung-ho">
+  <h2>Ủng hộ dự án</h2>
+  <p>Dự án do một người làm, tự bỏ tiền và thời gian. Nếu bạn muốn dự án đi tiếp, mọi sự ủng hộ đều giúp trả chi phí và thời gian làm. Bản lồng tiếng hoàn chỉnh dự kiến sẽ phát hành có thu phí.</p>
+  <div class="donate">
+    <img src="ung-ho-momo.jpg" width="1013" height="1107" loading="lazy" alt="Mã QR ủng hộ qua MoMo, chủ tài khoản NGUYEN HUU NGHIA">
+    <p>Quét mã này bằng MoMo hoặc ứng dụng ngân hàng. Tên người nhận hiện ra phải là NGUYEN HUU NGHIA.</p>
+    <p class="bank">Hoặc chuyển khoản qua ngân hàng ACB<br>Số tài khoản: <strong>2181587</strong><br>Chủ tài khoản: Nguyen Huu Nghia</p>
+  </div>
+  <a class="btn" href="#nghe-thu">Góp ý: dự án có nên tiếp tục?</a>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Dự án phi chính thức của người hâm mộ, không liên quan đến nhà phát triển hay nhà phát hành. Phantom Blade Zero và mọi nội dung của game thuộc về chủ sở hữu tương ứng. Các câu tiếng Trung là trích đoạn ngắn từ game, chỉ để so sánh.</p>
+  </div>
+</footer>
+
+<script>
+/* ---------- theme ---------- */
+(function(){
+  var root=document.documentElement,btn=document.getElementById('theme');
+  try{var t=localStorage.getItem('pbz_theme');if(t==='light'||t==='dark')root.setAttribute('data-theme',t);}catch(e){}
+  btn.addEventListener('click',function(){
+    var cur=root.getAttribute('data-theme');
+    if(!cur)cur=(window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)?'light':'dark';
+    var next=cur==='dark'?'light':'dark';
+    root.setAttribute('data-theme',next);
+    try{localStorage.setItem('pbz_theme',next);}catch(e){}
+  });
+})();
+
+/* ---------- data ----------
+   public_samples.json has two accepted shapes (see README.md):
+   1. Version 2: {"version":2,"scenes":[{"id","title","blurb","characters":[{"id","name","role","samples":[{"vi","zh","text","text_zh","dur"}]}]}]}
+   2. Old flat list: [{"cid","file","original_file","text","duration_s"}], grouped here by cid using the table below. */
+var LEGACY=[
+ ['hon','Hồn','nhân vật chính'],['ta_thuong','Tả Thương','sư huynh của Hồn'],['quy_thu','Quỷ Thủ',''],
+ ['lao_can_dau','Lão Căn Đầu','lão lái xe'],['truy_menh','Truy Mệnh',''],['ngoc_nhi','Ngọc Nhi',''],['inanis','Hư Không',''],
+ ['doi_truong','Đội Trưởng','đội trưởng kiếm khách'],['lao_cung_thu','Lão Cung Thủ','người từng dạy đệ tử bắn cung'],
+ ['hang_rong','Người bán hàng rong',''],['quy_sai','Quỷ Sai',''],['de_tu','Đệ tử hoảng sợ','']
+];
+function normalize(d){
+  if(d&&!Array.isArray(d)&&d.scenes)return d.scenes;
+  if(!Array.isArray(d))return [];
+  var by={},order=[];
+  d.forEach(function(x){if(!by[x.cid]){by[x.cid]=[];order.push(x.cid);}by[x.cid].push({vi:x.file,zh:x.original_file||'',text:x.text||'',dur:x.duration_s||0});});
+  var chars=[];
+  LEGACY.forEach(function(l){if(by[l[0]]){chars.push({id:l[0],name:l[1],role:l[2],samples:by[l[0]]});delete by[l[0]];}});
+  order.forEach(function(c){if(by[c])chars.push({id:c,name:c.replace(/_/g,' '),role:'',samples:by[c]});});
+  return [{id:'cac-nhan-vat',title:'',blurb:'',characters:chars}];
+}
+
+/* ---------- player (one shared audio element) ---------- */
+var A=new Audio();A.preload='none';
+var cur=null; // {row,mode}
+function fmt(s){if(!isFinite(s)||s<0)s=0;var m=Math.floor(s/60),x=Math.floor(s%60);return m+':'+(x<10?'0':'')+x;}
+function setRowState(row,playing){row.classList.toggle('playing',playing);var b=row.querySelector('.pp');b.setAttribute('aria-label',(playing?'Tạm dừng: ':'Phát: ')+row.dataset.who);}
+function resetRow(row){if(!row)return;setRowState(row,false);var r=row.querySelector('input[type=range]');r.value=0;row.querySelector('.tm').textContent=fmt(+row.dataset.dur||0);}
+function srcFor(row){return row.dataset.mode==='zh'&&row.dataset.zh?row.dataset.zh:row.dataset.vi;}
+function play(row){
+  if(cur&&cur.row===row){if(A.paused)A.play();else A.pause();return;}
+  if(cur)resetRow(cur.row);
+  cur={row:row};
+  A.src=srcFor(row);A.play().catch(function(){setRowState(row,false);});
+}
+A.addEventListener('play',function(){if(cur)setRowState(cur.row,true);});
+A.addEventListener('pause',function(){if(cur)setRowState(cur.row,false);});
+A.addEventListener('ended',function(){if(cur){var r=cur.row;resetRow(r);cur=null;}});
+A.addEventListener('timeupdate',function(){
+  if(!cur||!A.duration)return;
+  var r=cur.row.querySelector('input[type=range]');r.value=Math.round(A.currentTime/A.duration*1000);
+  cur.row.querySelector('.tm').textContent=fmt(A.currentTime);
+});
+A.addEventListener('loadedmetadata',function(){if(cur&&cur.pendingSeek!=null){A.currentTime=cur.pendingSeek*A.duration;cur.pendingSeek=null;}});
+A.addEventListener('error',function(){if(cur){setRowState(cur.row,false);cur.row.querySelector('.tm').textContent='lỗi';}});
+
+function el(tag,cls,txt){var e=document.createElement(tag);if(cls)e.className=cls;if(txt!=null)e.textContent=txt;return e;}
+var ICON_PLAY='<svg class="ic-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg><svg class="ic-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>';
+
+function buildTake(c,s){
+  var li=el('li','take');
+  li.dataset.vi=s.vi||'';li.dataset.zh=s.zh||'';li.dataset.mode='vi';li.dataset.dur=s.dur||0;li.dataset.who=c.name;
+  var r1=el('div','row1');
+  var pp=el('button','pp');pp.type='button';pp.innerHTML=ICON_PLAY;pp.setAttribute('aria-label','Phát: '+c.name);
+  pp.addEventListener('click',function(){play(li);});
+  var prog=el('div','prog');
+  var rg=el('input');rg.type='range';rg.min=0;rg.max=1000;rg.value=0;rg.setAttribute('aria-label','Tua câu thoại');
+  rg.addEventListener('input',function(){if(cur&&cur.row===li&&A.duration)A.currentTime=rg.value/1000*A.duration;});
+  var tm=el('span','tm',fmt(+s.dur||0));
+  prog.appendChild(rg);prog.appendChild(tm);
+  r1.appendChild(pp);r1.appendChild(prog);
+  if(s.zh&&s.vi){
+    var seg=el('div','seg');seg.setAttribute('role','group');seg.setAttribute('aria-label','Chọn bản nghe');
+    var bz=el('button',null,'Gốc');bz.type='button';bz.title='Bản gốc tiếng Trung';
+    var bv=el('button',null,'Việt');bv.type='button';bv.title='Bản lồng tiếng Việt';
+    bv.setAttribute('aria-pressed','true');bz.setAttribute('aria-pressed','false');
+    function pick(m){
+      if(li.dataset.mode===m)return;
+      li.dataset.mode=m;bv.setAttribute('aria-pressed',m==='vi');bz.setAttribute('aria-pressed',m==='zh');
+      if(cur&&cur.row===li){ // keep the position while switching
+        var frac=A.duration?A.currentTime/A.duration:0,was=!A.paused;
+        cur.pendingSeek=frac;A.src=srcFor(li);if(was)A.play().catch(function(){});
+      }
+    }
+    bz.addEventListener('click',function(){pick('zh');});bv.addEventListener('click',function(){pick('vi');});
+    seg.appendChild(bz);seg.appendChild(bv);r1.appendChild(seg);
+  }else{
+    r1.appendChild(el('span','vonly','Chỉ có bản Việt'));
+  }
+  li.appendChild(r1);
+  if(s.text){var p=el('p','line',s.text);p.lang='vi';if(s.text_zh){var sm=el('small',null,s.text_zh);sm.lang='zh';p.appendChild(sm);}li.appendChild(p);}
+  return li;
+}
+
+function render(scenes){
+  var host=document.getElementById('scenes');host.textContent='';
+  var chips=document.getElementById('chips');chips.textContent='';
+  var total=0;
+  scenes.forEach(function(sc,si){
+    var chars=(sc.characters||[]).filter(function(c){return c.samples&&c.samples.length;});
+    if(!chars.length)return;
+    var sec=el('div','scene');sec.id='canh-'+(sc.id||si);
+    if(sc.title){sec.appendChild(el('h3','st',sc.title));if(sc.blurb)sec.appendChild(el('p','sb',sc.blurb));}
+    chars.forEach(function(c){
+      var card=el('article','card');
+      card.appendChild(el('h3',null,c.name));
+      if(c.role)card.appendChild(el('p','role',c.role));
+      var ul=el('ul','takes');
+      c.samples.forEach(function(s){ul.appendChild(buildTake(c,s));total++;});
+      card.appendChild(ul);sec.appendChild(card);
+    });
+    host.appendChild(sec);
+    if(sc.title){var a=el('a','chip',sc.title);a.href='#'+sec.id;chips.appendChild(a);}
+  });
+  chips.hidden=chips.children.length<2;
+  if(!total)host.appendChild(el('p','empty','Chưa có mẫu giọng nào để hiện.'));
+}
+
+/* ---------- ratings (post to the owner's Google Form; unchanged behaviour) ---------- */
+var FORM={action:'https://docs.google.com/forms/d/e/1FAIpQLScBazRYJPa12xgm_rVcPwX7-wRLSbz-hytoNRgZP6vIznhZlQ/formResponse',scores:'entry.2031181118',cont:'entry.1156260990',voice:'entry.1843731748',note:'entry.126245456'};
+function pbzRating(){
+  if(!FORM.action||document.querySelector('.rate'))return;
+  var all=document.querySelectorAll('#nghe-thu .card'),seen={},cards=[];
+  all.forEach(function(c){var nm=c.querySelector('h3').textContent.trim();if(seen[nm])return;seen[nm]=1;cards.push(c);});
+  if(!cards.length)return;
+  cards.forEach(function(c,i){
+    var d=document.createElement('div');d.className='rate';
+    var h='<span class="q">Chấm giọng này</span>';
+    for(var k=1;k<=5;k++)h+='<label><input type="radio" name="r'+i+'" value="'+k+'" aria-label="'+k+' điểm"><span>'+k+'</span></label>';
+    d.innerHTML=h;c.appendChild(d);
+    var n=document.createElement('textarea');n.className='rnote';n.rows=2;n.maxLength=600;
+    n.placeholder='Nhận xét về giọng này, nếu có';
+    n.setAttribute('aria-label','Nhận xét về giọng '+c.querySelector('h3').textContent.trim());
+    c.appendChild(n);
+  });
+  document.getElementById('danh-gia').hidden=false;
+  var link=document.querySelector('#ung-ho .btn');if(link)link.setAttribute('href','#danh-gia');
+  var tb=document.getElementById('tb'),btn=document.getElementById('gui'),fr=document.getElementById('gf'),waiting=false,timer=null;
+  try{if(localStorage.getItem('pbz_sent')==='1')tb.textContent='Bạn đã gửi đánh giá trước đó. Nếu muốn, bạn vẫn có thể gửi lại.';}catch(e){}
+  fr.addEventListener('load',function(){
+    if(!waiting)return;waiting=false;clearTimeout(timer);
+    tb.textContent='Đã gửi. Cảm ơn bạn đã dành thời gian.';
+    try{localStorage.setItem('pbz_sent','1');}catch(e){}
+  });
+  btn.addEventListener('click',function(){
+    var parts=[],notes=[];
+    cards.forEach(function(c,i){
+      var nm=c.querySelector('h3').textContent.trim(),r=c.querySelector('input[name="r'+i+'"]:checked'),t=c.querySelector('.rnote').value.trim();
+      if(r)parts.push(nm+'='+r.value);
+      if(t)notes.push(nm+': '+t.replace(/\s*\n+\s*/g,' '));
+    });
+    var co=document.querySelector('input[name="cont"]:checked'),note=document.getElementById('gy').value.trim();
+    if(!parts.length&&!notes.length&&!co&&!note){tb.textContent='Bạn chưa chấm điểm hay trả lời câu nào.';return;}
+    var f=document.createElement('form');f.method='POST';f.action=FORM.action;f.target='gf';f.style.display='none';
+    [[FORM.scores,parts.join('; ')],[FORM.voice,notes.join('\n')],[FORM.cont,co?co.value:''],[FORM.note,note]].forEach(function(p){
+      var x=document.createElement('textarea');x.name=p[0];x.value=p[1];f.appendChild(x);});
+    document.body.appendChild(f);waiting=true;btn.disabled=true;tb.textContent='Đang gửi...';
+    timer=setTimeout(function(){if(!waiting)return;waiting=false;btn.disabled=false;tb.textContent='Chưa gửi được. Bạn thử lại sau nhé.';},10000);
+    f.submit();f.remove();
+  });
+}
+
+/* ---------- boot ----------
+   Loads public_samples.json (committed, no local paths; made by tools/make_public_samples.py).
+   If the fetch fails, the copy embedded below (the same data as public_samples.json) is used instead. */
+var EMBEDDED={"version":2,"scenes":[{"id":"mo-dau-quyet-dau","title":"Mở đầu: trận quyết đấu","blurb":"Hai sư huynh đệ giao đấu, đây là cảnh đầu tiên của game.","characters":[{"id":"hon","name":"Hồn","role":"nhân vật chính","samples":[{"vi":"audio/v2/hon_01.mp3","zh":"audio/v2/hon_01_goc.mp3","text":"Một chiêu nữa thôi… và mọi chuyện sẽ kết thúc.","text_zh":"下一招，一切就结束了。","dur":2.59},{"vi":"audio/v2/hon_02.mp3","zh":"audio/v2/hon_02_goc.mp3","text":"Ta nhất định sẽ đập tan dã tâm của ngươi!","text_zh":"我一定会将你的野心彻底粉碎！","dur":2.27}]},{"id":"ta_thuong","name":"Tả Thương","role":"sư huynh của Hồn","samples":[{"vi":"audio/v2/ta_thuong_01.mp3","zh":"audio/v2/ta_thuong_01_goc.mp3","text":"Bao năm qua, chúng ta chưa từng phân định thắng bại. Nhưng hôm nay… nhất định phải có một người ngã xuống!","text_zh":"这么多年来，我二人从未分过胜负，但今日势必要有一个人倒下！","dur":6.43}]}]},{"id":"muoi-sau-nam-truoc","title":"Mười sáu năm trước","blurb":"Ký ức về những buổi luyện tập ở võ trường của Hội.","characters":[{"id":"ta_thuong","name":"Tả Thương","role":"sư huynh của Hồn","samples":[{"vi":"audio/v2/ta_thuong_02.mp3","zh":"audio/v2/ta_thuong_02_goc.mp3","text":"Ngươi đến muộn thế. Mau bắt đầu thôi!","text_zh":"你来晚了，赶紧开始罢！","dur":2.25},{"vi":"audio/v2/ta_thuong_03.mp3","zh":"audio/v2/ta_thuong_03_goc.mp3","text":"Gần đây trong Võ Lâm vừa xảy ra một vụ thảm án kinh hoàng. Chắc Sư Phụ vẫn đang bận điều tra.","text_zh":"武林中近日有桩惊世骇俗的惨案，义父恐怕正忙于调查。","dur":4.65}]},{"id":"hon","name":"Hồn","role":"nhân vật chính","samples":[{"vi":"audio/v2/hon_03.mp3","zh":"audio/v2/hon_03_goc.mp3","text":"Hả? Sư Phụ vẫn chưa về sao?","text_zh":"哎？义父还没回来？","dur":1.93},{"vi":"audio/v2/hon_04.mp3","zh":"audio/v2/hon_04_goc.mp3","text":"Thật sao…? Bảo sao Sư Phụ vẫn chưa trở về…","text_zh":"啊？竟有这等事……义父看来是闲不下来了。","dur":3.87}]}]},{"id":"trai-tim","title":"Trái Tim","blurb":"Quỷ Thủ đưa ra hai cách để giữ Hồn sống.","characters":[{"id":"quy_thu","name":"Quỷ Thủ","role":"người cứu Hồn bằng một cái giá","samples":[{"vi":"audio/v2/quy_thu_01.mp3","zh":"audio/v2/quy_thu_01_goc.mp3","text":"Ngươi sẽ hành động bằng lý trí và toan tính tuyệt đối.","text_zh":"只在绝对的理性和算计之下行动；","dur":3.37},{"vi":"audio/v2/quy_thu_02.mp3","zh":"audio/v2/quy_thu_02_goc.mp3","text":"nhưng sau sáu mươi sáu ngày, nó sẽ lấy mạng ngươi.","text_zh":"到了六十六天之后，毒发身亡。","dur":5.15},{"vi":"audio/v2/quy_thu_03.mp3","zh":"audio/v2/quy_thu_03_goc.mp3","text":"Mang Trái Tim đó về đây, ta sẽ thay nó vào cho ngươi, bảo đảm ngươi sống qua sáu mươi sáu ngày!","text_zh":"你若夺来此心，吾便可给你换上，保你活过六十六天！","dur":5.3}]}]},{"id":"co-xe","title":"Trên chiếc xe ngựa","blurb":"Hồn đi về phía Bàng Trấn cùng lão lái xe.","characters":[{"id":"lao_can_dau","name":"Lão Căn Đầu","role":"lão lái xe","samples":[{"vi":"audio/v2/lao_can_dau_01.mp3","zh":"audio/v2/lao_can_dau_01_goc.mp3","text":"Trong trấn đang xảy ra chuyện rất đáng sợ! Lúc này còn đến đó làm gì chứ…?","text_zh":"那个镇上发生的事情，太吓人了！干嘛非得这个时候过去啊……","dur":4.02},{"vi":"audio/v2/lao_can_dau_02.mp3","zh":"audio/v2/lao_can_dau_02_goc.mp3","text":"Những ai mắc phải cứ như người mất hồn, ngày càng si dại…","text_zh":"得病的像是丢了魂儿，一天比一天痴呆，","dur":3.24},{"vi":"audio/v2/lao_can_dau_03.mp3","zh":"audio/v2/lao_can_dau_03_goc.mp3","text":"Nghe đồn rằng linh hồn của những người mắc bệnh đã ám vào chúng…","text_zh":"据说那上边儿，就附着昏睡过去那些人的魂儿呢……","dur":4.02}]},{"id":"hon","name":"Hồn","role":"nhân vật chính","samples":[{"vi":"audio/v2/hon_05.mp3","zh":"audio/v2/hon_05_goc.mp3","text":"Bàng Trấn, đã xảy ra chuyện gì?","text_zh":"庞镇……究竟发生了什么？","dur":2.25}]},{"id":"truy_menh","name":"Truy Mệnh","role":"sát thủ của Hội","samples":[{"vi":"audio/v2/truy_menh_01.mp3","zh":"audio/v2/truy_menh_01_goc.mp3","text":"Hồn Đại Nhân… đã giết Minh Chủ…","text_zh":"魂大人……杀害前冥主……","dur":3.53},{"vi":"audio/v2/truy_menh_02.mp3","zh":"audio/v2/truy_menh_02_goc.mp3","text":"Theo pháp lệnh của Hội…","text_zh":"依“组织”之法……","dur":2.12}]}]},{"id":"thung-lung","title":"Chương 1: thung lũng","blurb":"Hồn gặp Ngọc Nhi và những người sống sót trong thung lũng.","characters":[{"id":"ngoc_nhi","name":"Ngọc Nhi","role":"cô gái đi tìm hoa thuốc cho cha","samples":[{"vi":"audio/v2/ngoc_nhi_01.mp3","zh":"audio/v2/ngoc_nhi_01_goc.mp3","text":"Đúng. Ta tên là Ngọc Nhi. Cha ta là người nấu rượu trong trấn.","text_zh":"嗯，我叫玉儿，是镇子里酿酒师的女儿。","dur":4.81},{"vi":"audio/v2/ngoc_nhi_02.mp3","zh":"audio/v2/ngoc_nhi_02_goc.mp3","text":"Chỉ cần tìm được Huyết Nhục Hoa, cha ta nhất định sẽ khỏe lại!","text_zh":"若能找到这方子上说的血肉之花，爹爹一定会好起来的！","dur":3.87},{"vi":"audio/v2/ngoc_nhi_03.mp3","zh":"audio/v2/ngoc_nhi_03_goc.mp3","text":"Ngươi đến đây là để cứu chúng ta… đúng không?","text_zh":"你一定是来拯救我们镇子的吧……对不对……","dur":4.49}]},{"id":"hon","name":"Hồn","role":"nhân vật chính","samples":[{"vi":"audio/v2/hon_06.mp3","zh":"audio/v2/hon_06_goc.mp3","text":"Chỉ cần đến được đó, ta sẽ lần ra tung tích của Tả Thương.","text_zh":"（只要到了那儿，我就能追查到左殇的下落了吧！）","dur":3.53},{"vi":"audio/v2/hon_07.mp3","zh":"audio/v2/hon_07_goc.mp3","text":"Sau này hãy nhớ, giữa chốn giang hồ này, đừng dễ rơi lệ, hãy mỉm cười nhiều hơn.","text_zh":"以后切记，在这江湖中，莫要流泪，要多笑笑。","dur":5.77}]},{"id":"inanis","name":"Hư Không","samples":[{"vi":"audio/v2/inanis_01.mp3","zh":"audio/v2/inanis_01_goc.mp3","text":"Chiếc Chuông này sẽ chỉ ngân vang vì ngươi. Nó sẽ chữa lành mọi vết thương của ngươi.","text_zh":"这铃声只为你响起，会疗愈你的全部伤势。","dur":5.46},{"vi":"audio/v2/inanis_02.mp3","zh":"audio/v2/inanis_02_goc.mp3","text":"Dù là kẻ sống hay người chết, ai cũng để lại những mảnh ký ức trôi dạt trong Nội Võ Lâm…","text_zh":"无论是活人还是死人，总会有一丝飘散的记忆游荡于里武林之中……","dur":6.09}]},{"id":"lao_cung_thu","name":"Lão Cung Thủ","role":"người từng dạy đệ tử bắn cung","samples":[{"vi":"audio/v2/lao_cung_thu_01.mp3","zh":"audio/v2/lao_cung_thu_01_goc.mp3","text":"Ta không nỡ nhìn, nên đưa chúng về rồi dạy chúng bắn cung.","text_zh":"老夫见不得，便捡回来教他们弓箭。","dur":4.68},{"vi":"audio/v2/lao_cung_thu_02.mp3","zh":"audio/v2/lao_cung_thu_02_goc.mp3","text":"Đệ tử chỉ mang nhục về cho ta… chính ta đã nuôi dạy nên một lũ súc sinh…","text_zh":"门下不幸，教养出一群畜生……","dur":6.43}]},{"id":"doi_truong","name":"Đội Trưởng","role":"đội trưởng kiếm khách","samples":[{"vi":"audio/v2/doi_truong_01.mp3","zh":"audio/v2/doi_truong_01_goc.mp3","text":"Thuốc mỡ của Ngọc Nhi cô nương quả thật hiệu nghiệm phi thường.","text_zh":"……玉儿姑娘配的药膏，竟有如此奇效。","dur":3.24}]},{"id":"truy_menh","name":"Truy Mệnh","role":"sát thủ của Hội","samples":[{"vi":"audio/v2/truy_menh_03.mp3","zh":"audio/v2/truy_menh_03_goc.mp3","text":"Hãy gặp ta ở thác nước. Chúng ta sẽ phân thắng bại tại đó!","text_zh":"在前面的大瀑布，做个了断！","dur":5.49}]}]},{"id":"thap-sat-khi","title":"Tháp Sát Khí Cải Tạo","blurb":"Một Quỷ Sai của Hội không còn nghe lệnh.","characters":[{"id":"quy_sai","name":"Quỷ Sai","samples":[{"vi":"audio/v2/quy_sai_01.mp3","zh":"audio/v2/quy_sai_01_goc.mp3","text":"Tháp Sát Khí Cải Tạo này được Thập Nhất Nhân Các xây dựng từ rất lâu trước đây.","text_zh":"这种杀气改造塔是昔年“十一人阁”建造的。","dur":5.3},{"vi":"audio/v2/quy_sai_02.mp3","zh":"audio/v2/quy_sai_02_goc.mp3","text":"Ngươi nên cẩn thận thì hơn. Đồng liêu của ta đều đã nhận lệnh mang thủ cấp của ngươi về!","text_zh":"你可要小心了，我的同僚接到命令，要取你的性命！","dur":5.77},{"vi":"audio/v2/quy_sai_03.mp3","zh":"audio/v2/quy_sai_03_goc.mp3","text":"Mệnh Lệnh Khắc Tâm là thứ mà Hội dùng để khống chế chúng ta. Những phương pháp thông thường vốn không thể giải trừ nó.","text_zh":"楔子命令是“组织”用来控制我等的法门，寻常方法自是不可解除。","dur":7.05}]},{"id":"hon","name":"Hồn","role":"nhân vật chính","samples":[{"vi":"audio/v2/hon_08.mp3","zh":"audio/v2/hon_08_goc.mp3","text":"Vậy là… trong di tích này cũng có loại Hỗn Nguyên Thạch đó sao?","text_zh":"所以，此座杀气塔废墟的某处，也有这种浑源石吗？","dur":4.81}]}]},{"id":"duong-len-nui","title":"Đường lên núi","blurb":"Những người Hồn gặp trên đường lên đỉnh núi.","characters":[{"id":"luc_tam_thien","name":"Lục Tam Thiên","role":"trưởng thôn Lục Gia","samples":[{"vi":"audio/v2/luc_tam_thien_01.mp3","zh":"audio/v2/luc_tam_thien_01_goc.mp3","text":"Đa tạ các hạ. Lão tên là Lục Tam Thiên, trưởng thôn Lục Gia dưới chân núi…","text_zh":"多谢阁下，老朽名叫陆三迁，是山下陆家村的村长……","dur":8.02},{"vi":"audio/v2/luc_tam_thien_02.mp3","zh":"audio/v2/luc_tam_thien_02_goc.mp3","text":"Cái này… đúng là dây buộc tóc đỏ của Tiểu Thúy rồi. Nó quý như vàng, đi đâu cũng mang theo…","text_zh":"这……这是小翠的红头绳……她一直很爱惜，从不离身……","dur":8.18}]},{"id":"hon","name":"Hồn","role":"nhân vật chính","samples":[{"vi":"audio/v2/hon_09.mp3","zh":"audio/v2/hon_09_goc.mp3","text":"Thôn của ông đã không còn tồn tại nữa rồi.","text_zh":"那村子早已不存在了。","dur":1.93},{"vi":"audio/v2/hon_10.mp3","zh":"audio/v2/hon_10_goc.mp3","text":"Người chết không thể trở về. Chấp nhận sự thật ấy sẽ bớt những khổ đau vô ích.","text_zh":"人死不能复生，若能明白，何苦如此。","dur":5.15},{"vi":"audio/v2/hon_11.mp3","zh":"audio/v2/hon_11_goc.mp3","text":"Hoang Hành Tử… Tình huynh đệ còn ý nghĩa gì với hắn không?","text_zh":"荒行子……他还念着师兄弟之情吗？","dur":4.02}]},{"id":"song_sot","name":"Người sống sót trên núi","samples":[{"vi":"audio/v2/song_sot_01.mp3","zh":"audio/v2/song_sot_01_goc.mp3","text":"Hay! Lại đây, uống với ta một chén nào!","text_zh":"好！阁下何不过来共饮一杯？","dur":3.71}]},{"id":"lieu_nghia","name":"Liễu Nghĩa","role":"thuộc hạ của Mặc Ki Tử","samples":[{"vi":"audio/v2/lieu_nghia_01.mp3","zh":"audio/v2/lieu_nghia_01_goc.mp3","text":"Hừ… Liễu Nghĩa ta lại có ngày rơi vào bước đường này sao…","text_zh":"哼……我柳义竟会沦落到如此境地……","dur":4.34},{"vi":"audio/v2/lieu_nghia_02.mp3","zh":"audio/v2/lieu_nghia_02_goc.mp3","text":"Nhớ lại năm xưa, Chính Đạo chúng ta từng hưng thịnh như mặt trời giữa trưa!","text_zh":"曾几何时，我正道如日中天！","dur":5.77},{"vi":"audio/v2/lieu_nghia_03.mp3","zh":"audio/v2/lieu_nghia_03_goc.mp3","text":"Không ngờ vẫn có người lên được đến tận đây…","text_zh":"没想到，还有人可以到此……","dur":4.02}]},{"id":"mac_ki_tu","name":"Mặc Ki Tử","samples":[{"vi":"audio/v2/mac_ki_tu_01.mp3","zh":"audio/v2/mac_ki_tu_01_goc.mp3","text":"Được kề vai chiến đấu cùng ngươi… là vinh hạnh của ta.","text_zh":"跟你并肩作战过……实属荣幸……","dur":4.99}]}]}]};
+function boot(d){render(normalize(d));pbzRating();}
+fetch('public_samples.json').then(function(r){if(!r.ok)throw new Error(r.status);return r.json();}).then(boot).catch(function(){boot(EMBEDDED);});
+</script>
+</body>
+</html>
